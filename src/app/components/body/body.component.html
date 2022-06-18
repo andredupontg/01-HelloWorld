@@ -1,0 +1,33 @@
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-3">May the force be with you!</h1>
+      <p class="lead">Welcome to my first angular app.</p>
+      <hr class="my-2">
+      <h3>Jedi</h3>
+      <p>First Name: {{firstName}}</p>
+      <p>Last Name: {{lastName}}</p>
+      <p>Age: {{age}}</p>
+    </div>
+</div>
+
+
+<div class="row">
+  <div class="column">
+    <h1>*ngIf</h1>
+    <hr>
+    <div *ngIf="show" class="card text-white bg-primary mb-3" style="max-width: 100%;">
+      <div class="card-body">
+        <h4 class="card-title">{{quote.author}}</h4>
+        <p class="card-text">{{quote.message}}</p>
+      </div>
+    </div>
+    <button class="btn btn-outline-primary btn-block" (click)="show = !show">Show/Hide</button>
+  </div>
+  <div class="column">
+    <h1>*ngFor</h1>
+    <hr>
+    <ul *ngFor="let lord of characters; let i = index" class="list-group">
+      <li class="list-group-item">{{i}} - {{lord}}</li>
+    </ul>
+  </div>
+</div>
